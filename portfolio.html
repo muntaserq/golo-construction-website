@@ -227,6 +227,28 @@
   .btn-outline-dark:hover{
     background:rgba(58, 42, 14, 0.08);
   }
+  .btn-sms-cta{
+    background:var(--white);
+    color:var(--ink);
+    border:1px solid rgba(26,22,17,0.18);
+    padding:13px 22px;
+    border-radius:3px;
+    font-size:15px;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    transition:background .15s ease, box-shadow .15s ease;
+    box-shadow:0 2px 6px rgba(0,0,0,0.06);
+  }
+  .btn-sms-cta:hover{
+    background:#fcfbf8;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  }
+  .btn-sms-cta svg{
+    color:#1E6B2C;
+  }
 
   /* Contact Modal */
   dialog.contact-modal{
@@ -383,6 +405,95 @@
     color:var(--ochre-dark);
     text-decoration:underline;
     font-weight:500;
+  }
+
+  /* Contact Modal SMS Callout */
+  .modal-sms-prompt{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:#F0F7F1;
+    border:1px solid #C2E2C8;
+    border-radius:6px;
+    padding:14px 16px;
+    margin-bottom:18px;
+  }
+  .modal-sms-icon{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#E1F1E4;
+    color:#1E6B2C;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .modal-sms-content{
+    flex:1;
+    min-width:0;
+  }
+  .modal-sms-title{
+    font-size:14.5px;
+    font-weight:700;
+    color:#134E20;
+    line-height:1.3;
+  }
+  .modal-sms-desc{
+    font-size:13px;
+    color:#2D5A37;
+    margin:3px 0 0 0;
+    line-height:1.4;
+  }
+  .btn-sms-pill{
+    background:#1E6B2C;
+    color:var(--white);
+    padding:9px 15px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    white-space:nowrap;
+    text-decoration:none;
+    flex-shrink:0;
+    transition:background .15s ease;
+  }
+  .btn-sms-pill:hover{
+    background:#165222;
+    color:var(--white);
+  }
+  .modal-sms-divider{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    margin:16px 0 18px;
+    color:var(--ink-soft);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    font-weight:600;
+  }
+  .modal-sms-divider::before,
+  .modal-sms-divider::after{
+    content:'';
+    flex:1;
+    border-bottom:1px solid var(--line);
+  }
+  .modal-sms-divider span{
+    padding:0 12px;
+  }
+  @media (max-width:520px){
+    .modal-sms-prompt{
+      flex-direction:column;
+      align-items:stretch;
+      gap:12px;
+    }
+    .btn-sms-pill{
+      justify-content:center;
+      padding:10px 16px;
+    }
   }
 
   /* Lightbox Photo Viewer Modal */
@@ -599,6 +710,68 @@
   @media (max-width:560px){
     .gallery{grid-template-columns:1fr;}
   }
+
+  /* Mobile Floating Quick-Actions Dock */
+  .floating-quick-actions{
+    display:none;
+  }
+  @media (max-width:768px){
+    body{
+      padding-bottom:calc(72px + env(safe-area-inset-bottom, 0px));
+    }
+    .floating-quick-actions{
+      position:fixed;
+      bottom:0;
+      left:0;
+      right:0;
+      z-index:90;
+      display:flex;
+      gap:10px;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+      background:rgba(26, 22, 17, 0.94);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      border-top:1px solid rgba(255, 255, 255, 0.12);
+      box-shadow:0 -4px 18px rgba(0, 0, 0, 0.28);
+    }
+    .quick-action-btn{
+      flex:1;
+      min-height:46px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:6px;
+      font-size:14px;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform .12s ease, filter .12s ease;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .quick-action-btn:active{
+      transform:scale(0.98);
+    }
+    .quick-action-call{
+      background:#2D251B;
+      color:#F7F4EE;
+      border:1px solid rgba(255, 255, 255, 0.18);
+    }
+    .quick-action-call:hover{
+      color:var(--white);
+      background:#3A3023;
+    }
+    .quick-action-sms{
+      background:#1E6B2C;
+      color:var(--white);
+      border:1px solid rgba(255, 255, 255, 0.12);
+      box-shadow:0 2px 8px rgba(30, 107, 44, 0.35);
+    }
+    .quick-action-sms:hover{
+      background:#175623;
+      color:var(--white);
+    }
+  }
 </style>
 </head>
 <body>
@@ -750,6 +923,10 @@
     </div>
     <div class="cta-buttons">
       <a class="btn-dark" href="tel:+13126070217">Call +1 (312) 607-0217</a>
+      <a class="btn-sms-cta" href="sms:+13126070217?body=Hi%20Voglim%2C%20I'd%20like%20a%20free%20estimate%20on%20a%20project.%20Here%20are%20some%20photos%3A">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M12 7v6"></path><path d="M9 10h6"></path></svg>
+        Text us photos
+      </a>
       <a class="btn-outline-dark open-contact-modal" href="#contactModal" role="button">Email us</a>
     </div>
   </div>
@@ -773,6 +950,23 @@
     <button type="button" class="modal-close-btn close-contact-modal" aria-label="Close dialog">&times;</button>
   </div>
   <div class="modal-body">
+    <div class="modal-sms-prompt">
+      <div class="modal-sms-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M12 7v6"></path><path d="M9 10h6"></path></svg>
+      </div>
+      <div class="modal-sms-content">
+        <div class="modal-sms-title">Want a faster ballpark estimate?</div>
+        <p class="modal-sms-desc">Text photos of your project directly to Voglim at <strong style="white-space:nowrap;">+1 (312) 607-0217</strong>.</p>
+      </div>
+      <a class="btn-sms-pill" href="sms:+13126070217?body=Hi%20Voglim%2C%20I'd%20like%20a%20free%20estimate%20on%20a%20project.%20Here%20are%20some%20photos%3A">
+        <span>Text photos</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    </div>
+    <div class="modal-sms-divider">
+      <span>or send an email inquiry</span>
+    </div>
+
     <form id="contactForm" action="https://formsubmit.co/9586ce40a18bf3b45d611161a59c0f37" method="POST">
       <input type="hidden" name="_subject" value="New Customer Information Request - Golo Construction">
       <input type="hidden" name="_template" value="table">
@@ -1352,5 +1546,17 @@
     });
   }
 </script>
+
+<!-- Mobile Floating Quick-Actions Dock -->
+<aside class="floating-quick-actions" aria-label="Quick contact actions">
+  <a class="quick-action-btn quick-action-call" href="tel:+13126070217">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <span>Call Now</span>
+  </a>
+  <a class="quick-action-btn quick-action-sms" href="sms:+13126070217?body=Hi%20Voglim%2C%20I'd%20like%20a%20free%20estimate%20on%20a%20project.%20Here%20are%20some%20photos%3A">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M12 7v6"></path><path d="M9 10h6"></path></svg>
+    <span>Text Us Photos</span>
+  </a>
+</aside>
 </body>
 </html>
