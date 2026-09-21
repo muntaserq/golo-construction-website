@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://muntaserq.github.io/golo-construction-website/sitemap.xml
+Sitemap: https://goloconstruction.com/sitemap.xml
