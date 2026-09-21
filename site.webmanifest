@@ -1,0 +1,26 @@
+{
+  "name": "Golo Construction LLC",
+  "short_name": "Golo Construction",
+  "description": "Remodeling, custom carpentry, and painting in the greater Chicago area.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F2",
+  "theme_color": "#3C281E",
+  "icons": [
+    {
+      "src": "images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

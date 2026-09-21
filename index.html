@@ -7,6 +7,8 @@
 <meta name="description" content="Remodeling, custom carpentry, and painting in the greater Chicago area. Handled by an experienced, owner-led team. Request a free estimate today.">
 
 <link rel="canonical" href="https://goloconstruction.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#3C281E">
 
 <!-- Local SEO & Geo Targeting -->
 <meta name="geo.region" content="US-IL">
@@ -19,6 +21,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=3">
 <link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="manifest" href="site.webmanifest">
 
 <!-- Schema.org JSON-LD Structured Data: Local Business & Reviews -->
 <script type="application/ld+json">
@@ -43,6 +46,15 @@
     "@type": "GeoCoordinates",
     "latitude": 41.8781,
     "longitude": -87.6298
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.8781,
+      "longitude": -87.6298
+    },
+    "geoRadius": 45000
   },
   "openingHoursSpecification": [
     {
@@ -72,6 +84,50 @@
     {
       "@type": "AdministrativeArea",
       "name": "Greater Chicago Area"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Lincoln Park"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Lakeview"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Wicker Park"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Logan Square"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "West Loop"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Bucktown"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Roscoe Village"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "River North"
+    },
+    {
+      "@type": "City",
+      "name": "Evanston"
+    },
+    {
+      "@type": "City",
+      "name": "Oak Park"
+    },
+    {
+      "@type": "City",
+      "name": "Naperville"
     }
   ],
   "hasOfferCatalog": {
@@ -147,6 +203,56 @@
       "author": { "@type": "Person", "name": "Haroon" },
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "reviewBody": "Finished our basement A to Z. Communication was great every step of the way, and the space turned out amazing. Can't recommend him enough!"
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org JSON-LD: FAQPage Schema for Search Result Accordions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you provide free estimates for remodeling projects in Chicago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Golo Construction provides free, comprehensive on-site estimates and consultations for residential and commercial remodeling projects across Chicago and the greater Chicagoland area. You can call or text +1 (312) 607-0217 or submit a quote request online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Chicago neighborhoods and suburbs do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve the entire Chicago metropolitan area, including popular city neighborhoods like Lincoln Park, Lakeview, Wicker Park, Logan Square, West Loop, Bucktown, Roscoe Village, and River North, as well as suburban communities including Evanston, Oak Park, and Naperville."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What remodeling and construction services does Golo Construction provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our primary services include full kitchen and bathroom renovations, custom carpentry, built-ins, feature walls, fireplace mantels, interior and exterior painting, basement finishings, framing, and exterior deck construction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does your project consultation and pricing process work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We start with an on-site consultation where Voglim Demiri reviews your project requirements, discusses design options, and takes detailed measurements. We then provide an honest, transparent estimate with no hidden fees and keep open communication throughout the entire build."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you design and build custom carpentry and built-in shelving?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Custom carpentry and architectural finish trim are our hallmark specialties. From custom fireplace surrounds and built-in bookcases to custom closets and intricate crown molding, we build custom solutions to fit your exact floor plan."
+      }
     }
   ]
 }
@@ -736,6 +842,121 @@
     display:flex; justify-content:space-between; font-size:13px; color:#9C9382; flex-wrap:wrap; gap:10px;
   }
 
+  /* Areas Served */
+  .areas-served{
+    padding:72px 0;
+    background:var(--paper);
+    border-top:1px solid var(--line);
+  }
+  .areas-head{
+    max-width:680px;
+    margin-bottom:30px;
+  }
+  .areas-head h2{
+    font-size:clamp(26px, 3.2vw, 36px);
+    margin-bottom:12px;
+  }
+  .areas-head p{
+    color:var(--ink-soft);
+    font-size:16px;
+  }
+  .areas-chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .area-chip{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 16px;
+    font-size:14px;
+    font-weight:500;
+    color:var(--ink);
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    transition:border-color .15s, background .15s;
+  }
+  .area-chip svg{
+    color:var(--ochre-dark);
+    width:10px;
+    height:10px;
+    flex-shrink:0;
+  }
+  .area-chip:hover{
+    border-color:var(--ochre-dark);
+    background:var(--paper-2);
+  }
+
+  /* FAQ Section */
+  .faq-section{
+    padding:80px 0;
+    background:var(--paper-2);
+    border-top:1px solid var(--line);
+  }
+  .faq-head{
+    max-width:640px;
+    margin-bottom:36px;
+  }
+  .faq-head h2{
+    font-size:clamp(26px, 3.2vw, 36px);
+    margin-bottom:12px;
+  }
+  .faq-head p{
+    color:var(--ink-soft);
+    font-size:16px;
+  }
+  .faq-list{
+    max-width:820px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .faq-item{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .faq-item[open]{
+    border-color:var(--ochre-dark);
+    box-shadow:0 4px 14px rgba(32,28,22,.04);
+  }
+  .faq-question{
+    padding:20px 24px;
+    font-size:16.5px;
+    font-weight:600;
+    color:var(--ink);
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    list-style:none;
+    user-select:none;
+  }
+  .faq-question::-webkit-details-marker{
+    display:none;
+  }
+  .faq-icon{
+    width:18px;
+    height:18px;
+    flex-shrink:0;
+    color:var(--ink-soft);
+    transition:transform .22s ease, color .22s ease;
+  }
+  .faq-item[open] .faq-icon{
+    transform:rotate(180deg);
+    color:var(--ochre-dark);
+  }
+  .faq-answer{
+    padding:0 24px 20px;
+    color:var(--ink-soft);
+    font-size:15px;
+    line-height:1.65;
+  }
+
   @media (max-width:860px){
     .nav-links{display:none;}
     .menu-btn{display:flex;}
@@ -801,7 +1022,7 @@
       </div>
     </div>
     <div class="hero-art">
-      <img src="images/golo-logo-full.png" alt="Golo Construction LLC — Built right. Done right." style="width:100%; max-width:400px; height:auto; display:block;">
+      <img src="images/golo-logo-full.png" alt="Golo Construction LLC — Built right. Done right." fetchpriority="high" width="400" height="400" style="width:100%; max-width:400px; height:auto; display:block;">
     </div>
   </div>
 </section>
@@ -1024,6 +1245,95 @@
   </div>
 </section>
 
+<section class="areas-served" id="service-areas">
+  <div class="wrap">
+    <div class="areas-head">
+      <p class="eyebrow">Local Service Area</p>
+      <h2>Proudly Serving Chicago &amp; Surrounding Suburbs</h2>
+      <p>From downtown city residences to historic suburban single-family homes, Golo Construction delivers owner-led remodeling, custom carpentry, and painting across the greater Chicagoland region.</p>
+    </div>
+    <div class="areas-chips">
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Lincoln Park</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Lakeview</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Wicker Park</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Logan Square</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> West Loop</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Bucktown</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Roscoe Village</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> River North</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Old Town</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> South Loop</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Evanston</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Oak Park</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Naperville</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Park Ridge</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Skokie</span>
+      <span class="area-chip"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Greater Chicagoland</span>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="faq-head">
+      <p class="eyebrow">Frequently Asked Questions</p>
+      <h2>Everything you need to know</h2>
+      <p>Clear answers to common questions about estimates, timelines, and our remodeling process.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Do you provide free estimates for remodeling projects in Chicago?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes, Golo Construction provides free, comprehensive on-site estimates and consultations for residential and commercial remodeling projects across Chicago and the greater Chicagoland area. You can call or text +1 (312) 607-0217 or submit a quote request online.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>What Chicago neighborhoods and suburbs do you serve?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>We serve the entire Chicago metropolitan area, including popular city neighborhoods like Lincoln Park, Lakeview, Wicker Park, Logan Square, West Loop, Bucktown, Roscoe Village, and River North, as well as suburban communities including Evanston, Oak Park, and Naperville.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>What remodeling and construction services does Golo Construction provide?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>Our primary services include full kitchen and bathroom renovations, custom carpentry, built-ins, feature walls, fireplace mantels, interior and exterior painting, basement finishings, framing, and exterior deck construction.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>How does your project consultation and pricing process work?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>We start with an on-site consultation where Voglim Demiri reviews your project requirements, discusses design options, and takes detailed measurements. We then provide an honest, transparent estimate with no hidden fees and keep open communication throughout the entire build.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>Can you design and build custom carpentry and built-in shelving?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes! Custom carpentry and architectural finish trim are our hallmark specialties. From custom fireplace surrounds and built-in bookcases to custom closets and intricate crown molding, we build custom solutions to fit your exact floor plan.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="cta-band" id="contact">
   <div class="wrap cta-inner">
     <div>
@@ -1041,7 +1351,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/golo-logo-full.png" alt="Golo Construction LLC — Built right. Done right." style="width:220px; height:auto; display:block;">
+        <img src="images/golo-logo-full.png" alt="Golo Construction LLC — Built right. Done right." loading="lazy" decoding="async" width="220" style="width:220px; height:auto; display:block;">
         <p>Remodeling, carpentry, and painting delivered by a dedicated, owner-led team. Licensed and insured, serving the greater Chicago area.</p>
       </div>
       <div>
@@ -1052,6 +1362,8 @@
           <li><a href="#services">Painting</a></li>
           <li><a href="#services">Custom carpentry</a></li>
           <li><a href="portfolio.html">Full portfolio</a></li>
+          <li><a href="#service-areas">Areas served</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div>
@@ -1171,6 +1483,8 @@
       const first = (p.images && p.images[0]) || '';
       img.src = typeof first === 'string' ? first : (first.src || '');
       img.alt = typeof first === 'string' ? p.title : (first.alt || p.title);
+      img.loading = 'lazy';
+      img.decoding = 'async';
       thumb.appendChild(img);
 
       const h3 = document.createElement('h3');

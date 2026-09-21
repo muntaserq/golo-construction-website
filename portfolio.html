@@ -7,6 +7,8 @@
 <meta name="description" content="Explore recent remodeling, custom carpentry, deck, and painting projects completed by Golo Construction across the Chicago area.">
 
 <link rel="canonical" href="https://goloconstruction.com/portfolio.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#3C281E">
 
 <!-- Local SEO & Geo Targeting -->
 <meta name="geo.region" content="US-IL">
@@ -19,6 +21,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=3">
 <link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="manifest" href="site.webmanifest">
 
 <!-- Schema.org JSON-LD Structured Data: Portfolio CollectionPage -->
 <script type="application/ld+json">
@@ -942,6 +945,8 @@
       mainImg.src = firstImg.src;
       mainImg.dataset.full = firstImg.src;
       mainImg.alt = firstImg.alt;
+      mainImg.loading = 'lazy';
+      mainImg.decoding = 'async';
       cardThumb.appendChild(mainImg);
       card.appendChild(cardThumb);
 
@@ -953,6 +958,8 @@
           mini.src = img.src;
           mini.className = 'mini' + (idx === 0 ? ' active' : '');
           mini.alt = img.alt;
+          mini.loading = 'lazy';
+          mini.decoding = 'async';
           strip.appendChild(mini);
         });
         card.appendChild(strip);
