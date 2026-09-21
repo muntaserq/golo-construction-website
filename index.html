@@ -77,13 +77,18 @@
     padding:20px 32px;
     max-width:1080px; margin:0 auto;
   }
-  .brand{display:flex; align-items:center; gap:10px;}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; cursor:pointer;}
   .brand-chip{
     background:var(--ink);
     border-radius:5px;
     padding:7px 12px;
     display:flex;
     align-items:center;
+    transition:transform .15s ease, opacity .15s ease;
+  }
+  .brand:hover .brand-chip{
+    transform:scale(1.03);
+    opacity:0.95;
   }
   .brand-chip img{height:26px; width:auto; display:block;}
   .nav-links{display:flex; gap:32px; font-size:15px;}
@@ -614,11 +619,11 @@
 
 <header>
   <div class="nav">
-    <div class="brand">
+    <a class="brand" href="#" id="brandLogo" aria-label="Golo Construction — Back to top">
       <div class="brand-chip">
         <img src="images/golo-mark.png" alt="Golo Construction LLC">
       </div>
-    </div>
+    </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="portfolio.html">Portfolio</a>
@@ -1040,6 +1045,15 @@
       mobilePanel.classList.remove('open');
     });
   });
+
+  // Top-left brand logo click: smooth scroll to top of page
+  const brandLogo = document.getElementById('brandLogo');
+  if (brandLogo) {
+    brandLogo.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // Dynamic Recent Work from projects.json
   function renderRecentWork(projects) {
