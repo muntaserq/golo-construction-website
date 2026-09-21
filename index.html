@@ -33,6 +33,7 @@
 <!-- Fallback image link -->
 <link rel="image_src" href="https://muntaserq.github.io/golo-construction-website/images/golo-logo-full.png">
 
+<script src="data/projects.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -716,7 +717,7 @@
       <h2>Recent work</h2>
       <p><a href="portfolio.html" style="color:var(--rust); border-bottom:1px solid currentColor;">See the full portfolio &rarr;</a></p>
     </div>
-    <div class="work-grid">
+    <div class="work-grid" id="recentWorkGrid">
       <a class="work-card" href="portfolio.html">
         <div class="work-thumb">
           <img src="images/bathroom_remodel_finished.jpg" alt="Finished bathroom remodel">
@@ -1039,6 +1040,62 @@
       mobilePanel.classList.remove('open');
     });
   });
+
+  // Dynamic Recent Work from projects.json
+  function renderRecentWork(projects) {
+    const grid = document.getElementById('recentWorkGrid');
+    if (!grid || !Array.isArray(projects) || projects.length === 0) return;
+
+    const featured = projects.filter(p => p.featured);
+    const displayList = featured.length > 0 ? featured : projects.slice(0, 3);
+
+    grid.innerHTML = '';
+    displayList.forEach(p => {
+      const card = document.createElement('a');
+      card.className = 'work-card';
+      card.href = 'portfolio.html';
+
+      const thumb = document.createElement('div');
+      thumb.className = 'work-thumb';
+      const img = document.createElement('img');
+      const first = (p.images && p.images[0]) || '';
+      img.src = typeof first === 'string' ? first : (first.src || '');
+      img.alt = typeof first === 'string' ? p.title : (first.alt || p.title);
+      thumb.appendChild(img);
+
+      const h3 = document.createElement('h3');
+      h3.textContent = p.title;
+
+      const pDesc = document.createElement('p');
+      pDesc.textContent = p.description;
+
+      card.appendChild(thumb);
+      card.appendChild(h3);
+      card.appendChild(pDesc);
+
+      grid.appendChild(card);
+    });
+  }
+
+  async function initRecentWork() {
+    let projects = null;
+    try {
+      const res = await fetch('data/projects.json');
+      if (res.ok) {
+        projects = await res.json();
+      }
+    } catch (e) {
+      // Offline or local file preview mode fallback
+    }
+    if (!projects && Array.isArray(window.GOLO_PROJECTS)) {
+      projects = window.GOLO_PROJECTS;
+    }
+    if (projects) {
+      renderRecentWork(projects);
+    }
+  }
+
+  initRecentWork();
 
   // Testimonials Carousel Controls
   const testiTrack = document.getElementById('testiTrack');

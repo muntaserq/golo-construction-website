@@ -1,0 +1,168 @@
+// Golo Construction - Central Project Data
+// Edit projects here or in data/projects.json
+window.GOLO_PROJECTS = [
+  {
+    "id": "beverage-center",
+    "title": "Custom dining built-in & beverage center",
+    "category": "kitchen",
+    "categoryLabel": "Kitchens & built-ins",
+    "featured": true,
+    "description": "Custom arched alcove build-out featuring quartz countertop, mosaic tile backsplash, floating white oak shelves, cabinetry, and wine cooler.",
+    "images": [
+      {
+        "src": "images/kitchen_2.jpg",
+        "alt": "Custom dining alcove built-in (Finished view)"
+      },
+      {
+        "src": "images/kitchen_1.jpg",
+        "alt": "Backsplash tile, floating oak shelves & cabinetry detail"
+      },
+      {
+        "src": "images/kitchen_3.jpg",
+        "alt": "Dining room alcove before remodel"
+      }
+    ]
+  },
+  {
+    "id": "bathroom-remodel",
+    "title": "Full bathroom remodel",
+    "category": "bath",
+    "categoryLabel": "Bathroom",
+    "featured": true,
+    "description": "Glass shower enclosure, tile and vanity — start to finish.",
+    "images": [
+      {
+        "src": "images/bathroom_remodel_finished.jpg",
+        "alt": "Finished bathroom"
+      },
+      {
+        "src": "images/bathroom_shower_in_progress_remodel_copy.jpg",
+        "alt": "Shower tile in progress"
+      },
+      {
+        "src": "images/bathroom_shower_in_progress_remodel.jpg",
+        "alt": "Shower cement board stage"
+      }
+    ]
+  },
+  {
+    "id": "deck-staircase-refinish",
+    "title": "Deck & staircase refinish",
+    "category": "painting",
+    "categoryLabel": "Painting & staining",
+    "featured": true,
+    "description": "Two-story back porch stripped, repaired and restained top to bottom.",
+    "images": [
+      {
+        "src": "images/outside_deck_5.jpg",
+        "alt": "Full house view"
+      },
+      {
+        "src": "images/outside_deck_2.jpg",
+        "alt": "Staircase, refinished"
+      },
+      {
+        "src": "images/outside_deck_4.jpg",
+        "alt": "Upper deck"
+      }
+    ]
+  },
+  {
+    "id": "fireplace-surround",
+    "title": "Custom fireplace surround",
+    "category": "carpentry",
+    "categoryLabel": "Carpentry",
+    "featured": true,
+    "description": "Built and installed on site to fit the room exactly.",
+    "images": [
+      {
+        "src": "images/fireplace_1.jpg?v=2",
+        "alt": "Fireplace straight-on view"
+      },
+      {
+        "src": "images/fireplace_2.jpg?v=2",
+        "alt": "Fireplace angle view"
+      }
+    ]
+  },
+  {
+    "id": "door-trim-carpentry",
+    "title": "Door & trim carpentry",
+    "category": "carpentry",
+    "categoryLabel": "Carpentry",
+    "featured": false,
+    "description": "From an arched steel entry door to interior door casing and hardware.",
+    "images": [
+      {
+        "src": "images/door_frame_and_door_handle.jpg",
+        "alt": "Door and casing"
+      },
+      {
+        "src": "images/front_door.jpg",
+        "alt": "Arched steel entry door"
+      },
+      {
+        "src": "images/door_handle.jpg",
+        "alt": "Door hardware detail"
+      }
+    ]
+  },
+  {
+    "id": "wainscoting-trim",
+    "title": "Wainscoting & trim",
+    "category": "carpentry",
+    "categoryLabel": "Carpentry",
+    "featured": false,
+    "description": "Board-and-batten wall paneling, baseboard and casing, built and painted.",
+    "images": [
+      {
+        "src": "images/wayne_coating_room.jpg",
+        "alt": "Wainscoting, room view"
+      },
+      {
+        "src": "images/wayne_coating_room_2.jpg",
+        "alt": "Wainscoting, close view"
+      },
+      {
+        "src": "images/carpentry_baseboard.jpg",
+        "alt": "Baseboard detail"
+      }
+    ]
+  },
+  {
+    "id": "closet-shelving-install",
+    "title": "Closet shelving install",
+    "category": "carpentry",
+    "categoryLabel": "Carpentry",
+    "featured": false,
+    "description": "Wall-to-wall wire shelving and hanging rod system.",
+    "images": [
+      {
+        "src": "images/bedroom_closet_1.jpg",
+        "alt": "Closet shelving, angle 1"
+      },
+      {
+        "src": "images/bedroom_closet_2.jpg",
+        "alt": "Closet shelving, angle 2"
+      },
+      {
+        "src": "images/bedroom_closet_3.jpg",
+        "alt": "Closet shelving, full view"
+      }
+    ]
+  },
+  {
+    "id": "backyard-deck-stain",
+    "title": "Backyard deck build & stain",
+    "category": "painting",
+    "categoryLabel": "Painting & staining",
+    "featured": false,
+    "description": "Deck with a built-in perimeter bench, finished in a warm cedar tone.",
+    "images": [
+      {
+        "src": "images/outside_deck_6.jpg",
+        "alt": "Backyard deck with built-in bench, cedar stain"
+      }
+    ]
+  }
+];

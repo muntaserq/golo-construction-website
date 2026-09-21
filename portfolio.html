@@ -33,6 +33,7 @@
 <!-- Fallback image link -->
 <link rel="image_src" href="https://muntaserq.github.io/golo-construction-website/images/golo-logo-full.png">
 
+<script src="data/projects.js" defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -828,29 +829,129 @@
     });
   });
 
+  function applyFilter(filter) {
+    const cards = document.querySelectorAll('.gallery .card');
+    cards.forEach(card => {
+      card.classList.toggle('hidden', filter !== 'all' && card.dataset.cat !== filter);
+    });
+  }
+
   const buttons = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.card');
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      cards.forEach(card => {
-        card.classList.toggle('hidden', filter !== 'all' && card.dataset.cat !== filter);
-      });
+      applyFilter(btn.dataset.filter);
     });
   });
-  document.querySelectorAll('.thumb-strip').forEach(strip => {
-    const mainImg = strip.parentElement.querySelector('.card-thumb img');
-    strip.querySelectorAll('.mini').forEach(mini => {
-      mini.addEventListener('click', () => {
-        strip.querySelectorAll('.mini').forEach(m => m.classList.remove('active'));
-        mini.classList.add('active');
-        mainImg.src = mini.src;
-        mainImg.alt = mini.getAttribute('alt') || mainImg.alt;
+
+  function bindCardEvents(card) {
+    const thumb = card.querySelector('.card-thumb');
+    if (thumb) {
+      thumb.addEventListener('click', () => openLightbox(card));
+    }
+    const strip = card.querySelector('.thumb-strip');
+    if (strip) {
+      const mainImg = thumb ? thumb.querySelector('img') : null;
+      strip.querySelectorAll('.mini').forEach(mini => {
+        mini.addEventListener('click', (e) => {
+          e.stopPropagation();
+          strip.querySelectorAll('.mini').forEach(m => m.classList.remove('active'));
+          mini.classList.add('active');
+          if (mainImg) {
+            mainImg.src = mini.src;
+            mainImg.alt = mini.getAttribute('alt') || mainImg.alt;
+          }
+        });
       });
+    }
+  }
+
+  // Bind initial static cards
+  document.querySelectorAll('.gallery .card').forEach(bindCardEvents);
+
+  function renderPortfolio(projects) {
+    const gallery = document.getElementById('gallery');
+    if (!gallery || !Array.isArray(projects) || projects.length === 0) return;
+
+    gallery.innerHTML = '';
+    projects.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.dataset.cat = p.category || 'all';
+
+      const images = (p.images || []).map(img => {
+        if (typeof img === 'string') return { src: img, alt: p.title };
+        return { src: img.src, alt: img.alt || p.title };
+      });
+
+      const firstImg = images[0] || { src: '', alt: p.title };
+
+      const cardThumb = document.createElement('div');
+      cardThumb.className = 'card-thumb';
+      cardThumb.title = 'Click to view full size';
+      const mainImg = document.createElement('img');
+      mainImg.src = firstImg.src;
+      mainImg.dataset.full = firstImg.src;
+      mainImg.alt = firstImg.alt;
+      cardThumb.appendChild(mainImg);
+      card.appendChild(cardThumb);
+
+      if (images.length > 1) {
+        const strip = document.createElement('div');
+        strip.className = 'thumb-strip';
+        images.forEach((img, idx) => {
+          const mini = document.createElement('img');
+          mini.src = img.src;
+          mini.className = 'mini' + (idx === 0 ? ' active' : '');
+          mini.alt = img.alt;
+          strip.appendChild(mini);
+        });
+        card.appendChild(strip);
+      }
+
+      const cardBody = document.createElement('div');
+      cardBody.className = 'card-body';
+      const tag = document.createElement('span');
+      tag.className = 'card-tag';
+      tag.textContent = p.categoryLabel || p.category;
+      const title = document.createElement('h3');
+      title.textContent = p.title;
+      const desc = document.createElement('p');
+      desc.textContent = p.description;
+
+      cardBody.appendChild(tag);
+      cardBody.appendChild(title);
+      cardBody.appendChild(desc);
+      card.appendChild(cardBody);
+
+      bindCardEvents(card);
+      gallery.appendChild(card);
     });
-  });
+
+    const activeBtn = document.querySelector('.filter-btn.active');
+    if (activeBtn) applyFilter(activeBtn.dataset.filter);
+  }
+
+  async function initPortfolioData() {
+    let projects = null;
+    try {
+      const res = await fetch('data/projects.json');
+      if (res.ok) {
+        projects = await res.json();
+      }
+    } catch (e) {
+      // Offline or local file fallback
+    }
+    if (!projects && Array.isArray(window.GOLO_PROJECTS)) {
+      projects = window.GOLO_PROJECTS;
+    }
+    if (projects) {
+      renderPortfolio(projects);
+    }
+  }
+
+  initPortfolioData();
 
   // Lightbox Modal: Full size viewing & cycling
   const lightboxModal = document.getElementById('lightboxModal');
@@ -988,13 +1089,6 @@
     lightboxModal.close();
     document.body.style.overflow = '';
   }
-
-  document.querySelectorAll('.card .card-thumb').forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const card = thumb.closest('.card');
-      if (card) openLightbox(card);
-    });
-  });
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   if (lightboxNext) lightboxNext.addEventListener('click', nextLightbox);
