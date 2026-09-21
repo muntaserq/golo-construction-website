@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golo Construction LLC — Remodeling, Carpentry &amp; Painting</title>
+<meta name="description" content="Remodeling, custom carpentry, and painting in the greater Chicago area. Handled by an experienced, owner-led team. Request a free estimate today.">
+
+<!-- Favicon / Browser Tab Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png?v=3">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png?v=3">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+
+<!-- Open Graph / Facebook / iMessage / WhatsApp / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Golo Construction LLC — Remodeling, Carpentry &amp; Painting">
+<meta property="og:description" content="Remodeling, custom carpentry, and painting in the greater Chicago area. Handled by an experienced, owner-led team. Request a free estimate today.">
+<meta property="og:image" content="images/golo-logo-full.png">
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="718">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Golo Construction LLC Logo">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Golo Construction LLC — Remodeling, Carpentry &amp; Painting">
+<meta name="twitter:description" content="Remodeling, custom carpentry, and painting in the greater Chicago area. Handled by an experienced, owner-led team. Request a free estimate today.">
+<meta name="twitter:image" content="images/golo-logo-full.png">
+
+<!-- Fallback image link -->
+<link rel="image_src" href="images/golo-logo-full.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F2;
+    --paper-2:#F2EBDA;
+    --ink:#201C16;
+    --ink-soft:#6E6558;
+    --line:#E6DDC9;
+    --ochre:#E8A62E;
+    --ochre-dark:#C6860A;
+    --rust:#C1501F;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    line-height:1.1;
+    color:var(--ink);
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 32px;}
+  img,svg{display:block;}
+
+  /* header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 32px;
+    max-width:1080px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-chip{
+    background:var(--ink);
+    border-radius:5px;
+    padding:7px 12px;
+    display:flex;
+    align-items:center;
+  }
+  .brand-chip img{height:26px; width:auto; display:block;}
+  .nav-links{display:flex; gap:32px; font-size:15px;}
+  .nav-links a{color:var(--ink-soft); transition:color .15s;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-cta{
+    background:var(--ink);
+    color:var(--white);
+    padding:10px 20px;
+    border-radius:3px;
+    font-size:14px;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--ochre-dark);}
+  .menu-btn{
+    display:none;
+    background:none; border:none; cursor:pointer;
+    width:36px; height:36px; padding:0;
+    flex-direction:column; justify-content:center; align-items:center; gap:5px;
+  }
+  .menu-btn span{width:22px; height:2px; background:var(--ink); display:block; transition:transform .2s, opacity .2s;}
+  .menu-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-btn.open span:nth-child(2){opacity:0;}
+  .menu-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-panel{
+    display:none;
+    flex-direction:column;
+    border-top:1px solid var(--line);
+    background:var(--paper);
+  }
+  .mobile-panel a{
+    padding:16px 32px;
+    font-size:16px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  .mobile-panel.open{display:flex;}
+
+  /* hero */
+  .hero{
+    padding:88px 0 96px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:56px;
+    align-items:center;
+  }
+  .eyebrow{
+    font-size:14px;
+    color:var(--ochre-dark);
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(38px, 5vw, 58px);
+    max-width:11.5ch;
+  }
+  .hero p.lede{
+    margin-top:22px;
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-actions{display:flex; gap:16px; margin-top:34px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--rust);
+    color:var(--white);
+    padding:14px 26px;
+    border-radius:3px;
+    font-size:15px;
+    font-weight:500;
+    display:inline-block;
+  }
+  .btn-primary:hover{background:#8c3618;}
+  .btn-secondary{
+    border:1px solid var(--ink);
+    padding:13px 25px;
+    border-radius:3px;
+    font-size:15px;
+    display:inline-block;
+  }
+  .btn-secondary:hover{background:var(--ink); color:var(--white);}
+  .hero-stats{
+    display:flex; gap:36px;
+    margin-top:52px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .stat b{display:block; font-family:'Fraunces', serif; font-size:26px; font-weight:600;}
+  .stat span{font-size:13px; color:var(--ink-soft);}
+
+  .hero-art{
+    aspect-ratio:1/1.05;
+    background:var(--ink);
+    border-radius:4px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero-art svg{width:100%; height:100%;}
+
+  /* trust strip */
+  .trust{
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:22px 0;
+    background:var(--paper-2);
+  }
+  .trust .wrap{
+    display:flex; flex-wrap:wrap; gap:28px; justify-content:space-between;
+    font-size:13.5px; color:var(--ink-soft);
+  }
+  .trust .item{display:flex; align-items:center; gap:8px;}
+  .trust .item svg{width:16px; height:16px; flex-shrink:0;}
+
+  /* services */
+  .section{padding:96px 0;}
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:24px; margin-bottom:52px; flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(28px,3.4vw,38px); max-width:16ch;}
+  .section-head p{color:var(--ink-soft); font-size:15.5px; max-width:38ch;}
+
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service{
+    background:var(--paper);
+    padding:34px 28px;
+  }
+  .service svg{width:30px; height:30px; margin-bottom:20px; color:var(--rust);}
+  .service h3{font-size:19px; margin-bottom:10px;}
+  .service p{font-size:14.5px; color:var(--ink-soft);}
+
+  /* featured work */
+  .work-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .work-card{display:block;}
+  .work-thumb{aspect-ratio:4/3; border-radius:4px; overflow:hidden; margin-bottom:16px; background:#201C16;}
+  .work-thumb svg{width:100%; height:100%;}
+  .work-thumb img{width:100%; height:100%; object-fit:cover; display:block;}
+  .work-card h3{font-size:17px; margin-bottom:4px; transition:color .15s;}
+  .work-card:hover h3{color:var(--rust);}
+  .work-card p{font-size:13.5px; color:var(--ink-soft);}
+
+  /* process */
+  .process-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:32px;
+  }
+  .process-step{position:relative; padding-top:22px; border-top:2px solid var(--ink);}
+  .process-step .num{
+    font-family:'Fraunces', serif; font-size:15px; color:var(--ochre-dark); margin-bottom:10px; display:block;
+  }
+  .process-step h3{font-size:18px; margin-bottom:8px;}
+  .process-step p{font-size:14px; color:var(--ink-soft);}
+
+  /* about */
+  .about{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .about .section-head h2, .about .section-head p{color:var(--paper);}
+  .about .section-head p{color:#C9C2B3;}
+  .about-grid{
+    display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center;
+  }
+  .about-photo{
+    aspect-ratio:3/4; background:#332D24; border-radius:4px; overflow:hidden;
+    box-shadow:0 18px 40px rgba(0,0,0,0.22);
+  }
+  .about-photo img, .about-photo svg{width:100%; height:100%; object-fit:cover; display:block;}
+  .about-copy p{font-size:16px; color:#D8D2C2; margin-bottom:18px; max-width:52ch;}
+  .about-copy .quote{
+    font-family:'Fraunces', serif; font-size:22px; font-style:normal;
+    color:var(--paper); margin:26px 0 22px; max-width:38ch; line-height:1.35;
+  }
+  .about-sig{font-size:14px; color:#B6AE9C;}
+
+  /* testimonials carousel */
+  .testi-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:28px;
+    flex-wrap:wrap;
+  }
+  .testi-nav{
+    display:flex;
+    gap:10px;
+    align-items:center;
+  }
+  .testi-arrow{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:var(--white);
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:background .15s, border-color .15s, color .15s, transform .15s, opacity .15s;
+    box-shadow:0 2px 6px rgba(32,28,22,.04);
+  }
+  .testi-arrow:hover:not(:disabled){
+    background:var(--ink);
+    border-color:var(--ink);
+    color:var(--white);
+    transform:scale(1.06);
+  }
+  .testi-arrow:disabled{
+    opacity:.35;
+    cursor:not-allowed;
+    transform:none;
+  }
+  .testi-carousel{
+    position:relative;
+    width:100%;
+  }
+  .testi-track{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    padding:6px 4px 18px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .testi-track::-webkit-scrollbar{
+    display:none;
+  }
+  .testi{
+    flex:0 0 calc((100% - 48px) / 3);
+    scroll-snap-align:start;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:30px 28px 24px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:0 4px 16px rgba(32,28,22,.03);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .testi:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(32,28,22,.08);
+  }
+  .testi p{
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--ink);
+    margin-bottom:20px;
+    flex-grow:1;
+  }
+  .testi-author{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    border-top:1px solid var(--line);
+    padding-top:16px;
+  }
+  .testi .name{font-size:15px; font-weight:600; color:var(--ink);}
+  .testi .role{font-size:12.5px; color:var(--ochre-dark); font-weight:500;}
+  .stars{display:flex; gap:3px; margin-bottom:14px;}
+  .stars svg{width:16px; height:16px; color:var(--ochre);}
+
+  .testi-dots{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:10px;
+  }
+  .testi-dot{
+    width:8px;
+    height:8px;
+    border-radius:4px;
+    background:var(--line);
+    border:none;
+    padding:0;
+    cursor:pointer;
+    transition:width .2s ease, background .2s ease;
+  }
+  .testi-dot.active{
+    width:24px;
+    background:var(--ochre-dark);
+  }
+
+  @media (max-width:960px){
+    .testi{flex:0 0 calc((100% - 24px) / 2);}
+  }
+  @media (max-width:600px){
+    .testi-head{flex-direction:row; align-items:flex-end;}
+    .testi{flex:0 0 86%;}
+    .testi-track{gap:16px;}
+  }
+
+  /* contact / cta */
+  .cta-band{
+    background:var(--ochre);
+    padding:64px 0;
+  }
+  .cta-inner{
+    display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .cta-inner h2{font-size:clamp(26px,3vw,34px); color:#3A2A0E; max-width:16ch;}
+  .cta-inner p{color:#5C4517; margin-top:8px; font-size:15px;}
+  .cta-buttons{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-dark{
+    background:var(--ink); color:var(--white); padding:14px 26px; border-radius:3px; font-size:15px; font-weight:500;
+  }
+  .btn-dark:hover{background:#000;}
+  .btn-outline-dark{
+    border:1px solid #3A2A0E; color:#3A2A0E; padding:13px 25px; border-radius:3px; font-size:15px; cursor:pointer; display:inline-block; transition:background .15s, color .15s; background:transparent; font-family:inherit;
+  }
+  .btn-outline-dark:hover{
+    background:rgba(58, 42, 14, 0.08);
+  }
+
+  /* Contact Modal */
+  dialog.contact-modal{
+    border:none;
+    border-radius:8px;
+    padding:0;
+    max-width:540px;
+    width:calc(100% - 32px);
+    margin:auto;
+    box-shadow:0 24px 48px rgba(32,28,22,.28), 0 0 0 1px rgba(32,28,22,.08);
+    background:var(--paper);
+    color:var(--ink);
+    max-height:92vh;
+    overflow-y:auto;
+  }
+  dialog.contact-modal::backdrop{
+    background:rgba(26, 22, 17, 0.65);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+  }
+  .modal-header{
+    padding:24px 28px 18px;
+    background:var(--paper-2);
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+    position:sticky;
+    top:0;
+    z-index:2;
+  }
+  .modal-header h3{
+    font-size:22px;
+    color:var(--ink);
+    margin-bottom:4px;
+  }
+  .modal-header p{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .modal-close-btn{
+    background:none;
+    border:none;
+    font-size:28px;
+    line-height:1;
+    color:var(--ink-soft);
+    cursor:pointer;
+    padding:2px 8px;
+    border-radius:4px;
+    transition:background .15s, color .15s;
+  }
+  .modal-close-btn:hover{
+    background:rgba(32,28,22,.08);
+    color:var(--ink);
+  }
+  .modal-body{
+    padding:24px 28px 28px;
+  }
+  .form-group{
+    margin-bottom:16px;
+  }
+  .form-group label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:6px;
+  }
+  .form-group label .req{
+    color:var(--rust);
+  }
+  .form-control{
+    width:100%;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:14.5px;
+    padding:11px 14px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--white);
+    color:var(--ink);
+    outline:none;
+    transition:border-color .15s, box-shadow .15s;
+    box-sizing:border-box;
+  }
+  .form-control:focus{
+    border-color:var(--ochre-dark);
+    box-shadow:0 0 0 3px rgba(232,166,46,.2);
+  }
+  .form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  @media (max-width:520px){
+    .form-row{grid-template-columns:1fr;}
+    .modal-header, .modal-body{padding:20px 20px;}
+  }
+  .form-submit-btn{
+    width:100%;
+    background:var(--rust);
+    color:var(--white);
+    border:none;
+    padding:14px 20px;
+    border-radius:4px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:background .15s;
+    margin-top:6px;
+  }
+  .form-submit-btn:hover{
+    background:#a84216;
+  }
+  .form-submit-btn:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+  }
+  .form-status{
+    margin-top:14px;
+    padding:12px 14px;
+    border-radius:4px;
+    font-size:13.5px;
+    display:none;
+    line-height:1.45;
+  }
+  .form-status.success{
+    display:block;
+    background:#EBF7EE;
+    color:#1E6B2C;
+    border:1px solid #BEE3C4;
+  }
+  .form-status.error{
+    display:block;
+    background:#FDF2F2;
+    color:#9B1C1C;
+    border:1px solid #F8B4B4;
+  }
+  .form-status.info{
+    display:block;
+    background:#FEF7EB;
+    color:#8F5B0F;
+    border:1px solid #F8DC9C;
+  }
+  .modal-direct-note{
+    margin-top:16px;
+    font-size:13px;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+  .modal-direct-note a{
+    color:var(--ochre-dark);
+    text-decoration:underline;
+    font-weight:500;
+  }
+
+  footer{padding:64px 0 40px; background:var(--ink); color:#D8D2C2;}
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px;
+    padding-bottom:36px; border-bottom:1px solid #3A342A; margin-bottom:24px;
+  }
+  .footer-brand p{color:#B6AE9C; font-size:14px; margin-top:14px; max-width:34ch;}
+  footer h4{font-size:13px; letter-spacing:.02em; margin-bottom:14px; color:#B6AE9C; font-weight:600;}
+  footer ul{list-style:none;}
+  footer li{margin-bottom:9px; font-size:14.5px;}
+  footer li a{color:#D8D2C2;}
+  footer li a:hover{color:var(--ochre);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; font-size:13px; color:#9C9382; flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .menu-btn{display:flex;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-art{order:-1; aspect-ratio:16/10;}
+    .services-grid{grid-template-columns:1fr 1fr;}
+    .work-grid{grid-template-columns:1fr 1fr;}
+    .process-list{grid-template-columns:1fr 1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr; gap:28px;}
+  }
+  @media (max-width:520px){
+    .services-grid{grid-template-columns:1fr;}
+    .work-grid{grid-template-columns:1fr;}
+    .process-list{grid-template-columns:1fr;}
+    .hero-stats{gap:24px; flex-wrap:wrap;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="brand-chip">
+        <img src="images/golo-mark.png" alt="Golo Construction LLC">
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get a quote</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#services">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Get a quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Serving the greater Chicago area</p>
+      <h1>One contractor, every trade, no run-around.</h1>
+      <p class="lede">Golo Construction handles remodels, carpentry, and painting under one roof — so you get one point of contact from the first measurement to the final coat.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Request a free estimate</a>
+        <a class="btn-secondary" href="tel:+13126070217">+1 (312) 607-0217</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>15+ yrs</b><span>in the trade</span></div>
+        <div class="stat"><b>100%</b><span>owner-led team</span></div>
+        <div class="stat"><b>Licensed</b><span>&amp; insured LLC</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 400 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute; inset:0;">
+        <rect width="400" height="420" fill="#201C16"/>
+        <g stroke="#E8A62E" stroke-width="1" opacity="0.22">
+          <line x1="0" y1="70" x2="400" y2="70"/>
+          <line x1="0" y1="140" x2="400" y2="140"/>
+          <line x1="0" y1="210" x2="400" y2="210"/>
+          <line x1="0" y1="280" x2="400" y2="280"/>
+          <line x1="0" y1="350" x2="400" y2="350"/>
+          <line x1="80" y1="0" x2="80" y2="420"/>
+          <line x1="160" y1="0" x2="160" y2="420"/>
+          <line x1="240" y1="0" x2="240" y2="420"/>
+          <line x1="320" y1="0" x2="320" y2="420"/>
+        </g>
+      </svg>
+      <img src="images/golo-logo-full.png" alt="Golo Construction LLC — Built right. Done right." style="position:relative; width:78%; z-index:1;">
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed &amp; insured LLC</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 4.5v5c0 5-3.8 8.7-9 10.5-5.2-1.8-9-5.5-9-10.5v-5L12 2z"/></svg> Written warranty on every job</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg> Free on-site estimates</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Most jobs on schedule, no subs</div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Whatever the job needs, it's one call.</h2>
+      <p>Our skilled in-house team handles the full scope of your remodel — from framing to the final coat of paint — without the stress of juggling disconnected subcontractors.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l6-6M14 7l3-3 4 4-3 3M3 21l4-1 8-8-3-3-8 8z"/></svg>
+        <h3>Kitchen &amp; bath remodels</h3>
+        <p>Full gut renovations or targeted updates — cabinetry, tile, plumbing rough-in, and finish work.</p>
+      </div>
+      <div class="service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-6 9 6M5 9v10h14V9M9 19v-6h6v6"/></svg>
+        <h3>Additions &amp; framing</h3>
+        <p>Room additions, basement build-outs, and structural carpentry done to code.</p>
+      </div>
+      <div class="service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21v-4l12-12 4 4-12 12H4z"/><path d="M14 6l4 4"/></svg>
+        <h3>Interior &amp; exterior painting</h3>
+        <p>Prep, patch, and paint — trim, cabinets, siding, and full-room repaints.</p>
+      </div>
+      <div class="service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3v18M18 3v18M6 8h12M6 16h12"/></svg>
+        <h3>Custom carpentry</h3>
+        <p>Built-ins, trim carpentry, decks, and fencing — measured and built on site.</p>
+      </div>
+      <div class="service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <h3>Flooring &amp; drywall</h3>
+        <p>Hardwood, LVP, and tile installs, plus drywall patching, hanging, and finishing.</p>
+      </div>
+      <div class="service">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg>
+        <h3>Repairs &amp; punch lists</h3>
+        <p>Smaller fixes — the stuck door, the water-damaged ceiling, the pre-sale to-do list.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Recent work</h2>
+      <p><a href="portfolio.html" style="color:var(--rust); border-bottom:1px solid currentColor;">See the full portfolio &rarr;</a></p>
+    </div>
+    <div class="work-grid">
+      <a class="work-card" href="portfolio.html">
+        <div class="work-thumb">
+          <img src="images/bathroom_remodel_finished.jpg" alt="Finished bathroom remodel">
+        </div>
+        <h3>Full bathroom remodel</h3>
+        <p>Glass shower enclosure, tile &amp; vanity</p>
+      </a>
+      <a class="work-card" href="portfolio.html">
+        <div class="work-thumb">
+          <img src="images/outside_deck_4.jpg" alt="Refinished back deck and staircase">
+        </div>
+        <h3>Deck &amp; staircase refinish</h3>
+        <p>Stripped, repaired &amp; restained top to bottom</p>
+      </a>
+      <a class="work-card" href="portfolio.html">
+        <div class="work-thumb">
+          <img src="images/fireplace_1.jpg?v=2" alt="Custom built fireplace surround">
+        </div>
+        <h3>Custom fireplace surround</h3>
+        <p>Built and installed on site</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How a project runs</h2>
+      <p>Four steps, no surprises in between.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-step">
+        <span class="num">01</span>
+        <h3>Walkthrough</h3>
+        <p>Voglim and our team visit your property, evaluate the scope in detail, and discuss practical options for your goals.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">02</span>
+        <h3>Written estimate</h3>
+        <p>A clear quote with materials, timeline, and payment schedule — no vague line items.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">03</span>
+        <h3>The work</h3>
+        <p>Scheduled start date, daily cleanup, and direct communication from our on-site team throughout the project.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">04</span>
+        <h3>Walkthrough &amp; warranty</h3>
+        <p>A final walkthrough before sign-off, backed by a written workmanship warranty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap section-head" style="margin-bottom:0;">
+    <h2>Craftsmanship led by experience</h2>
+    <p></p>
+  </div>
+  <div class="wrap about-grid" style="padding-top:44px;">
+    <div class="about-photo">
+      <img src="images/voglim.JPG" alt="Voglim Demir — Owner &amp; Founder of Golo Construction LLC on site" loading="lazy">
+    </div>
+    <div class="about-copy">
+      <p class="quote">"We don't hand your home over to subcontracted strangers. My team and I are on site every day with our tools in hand and our eyes on every detail. When you have a question, you talk directly to me."</p>
+      <p>Golo Construction was founded by master craftsman Voglim Demir, bringing over 15 years of hands-on remodeling and carpentry expertise across the greater Chicago area. Rather than operating like a distant general contractor, Voglim leads a dedicated, skilled team that works together on every project — from custom carpentry and painting to full kitchen and bath remodels. With Voglim actively managing each build and working right alongside his crew, clients get the efficiency of an experienced team paired with the personal accountability and meticulous standards of an owner-led company.</p>
+      <p class="about-sig">— Voglim Demir, Owner &amp; Founder</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="section-head testi-head">
+      <div>
+        <h2>What clients say</h2>
+        <p>Real experiences and 5-star reviews from homeowners across the Chicago area.</p>
+      </div>
+      <div class="testi-nav">
+        <button type="button" class="testi-arrow prev" id="testiPrev" aria-label="Previous reviews">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button type="button" class="testi-arrow next" id="testiNext" aria-label="Next reviews">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="testi-carousel">
+      <div class="testi-track" id="testiTrack">
+        
+        <div class="testi">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+            </div>
+            <p>"Remodeled my townhome from top to bottom. Extremely knowledgeable, gave an honest, competitive price, and the work turned out fantastic. I would highly recommend him to anyone looking for quality work."</p>
+          </div>
+          <div class="testi-author">
+            <div class="name">Muntaser</div>
+            <div class="role">Townhome Full Remodel • Verified Client</div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+            </div>
+            <p>"Installed our fireplace, completed the feature wall in our family room, and handled closet rods with pure perfection and top-notch craftsmanship. Highly recommend him for any custom home project."</p>
+          </div>
+          <div class="testi-author">
+            <div class="name">Bilal</div>
+            <div class="role">Fireplace &amp; Custom Carpentry • Verified Client</div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+            </div>
+            <p>"Finished our basement A to Z. Communication was great every step of the way, and the space turned out amazing. Can't recommend him enough!"</p>
+          </div>
+          <div class="testi-author">
+            <div class="name">Haroon</div>
+            <div class="role">Full Basement Finish • Verified Client</div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+            </div>
+            <p>"Completely transformed our outdated kitchen on schedule. Clean, professional crew with exceptional attention to detail. Highly recommend him without hesitation."</p>
+          </div>
+          <div class="testi-author">
+            <div class="name">Dave</div>
+            <div class="role">Kitchen Transformation • Verified Client</div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+            </div>
+            <p>"Hired them for a full primary bathroom renovation. Transparent pricing, beautiful tile work, and zero stress. I highly recommend him to all my friends and family."</p>
+          </div>
+          <div class="testi-author">
+            <div class="name">Sarah</div>
+            <div class="role">Primary Bathroom Renovation • Verified Client</div>
+          </div>
+        </div>
+
+        <div class="testi">
+          <div>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 6.9L12 17.8 5.8 21.1l1.4-6.9L2 9.4l7-.9z"/></svg>
+            </div>
+            <p>"Replaced our exterior siding and front porch. Solid craftsmanship, fair estimate, and finished right on time. Would definitely recommend him for any exterior job."</p>
+          </div>
+          <div class="testi-author">
+            <div class="name">Mark</div>
+            <div class="role">Exterior Siding &amp; Porch • Verified Client</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="testi-dots" id="testiDots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="contact">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>Get a free estimate this week</h2>
+      <p>Call, text, or send a message — Voglim and our team will get back to you within a day.</p>
+    </div>
+    <div class="cta-buttons">
+      <a class="btn-dark" href="tel:+13126070217">Call +1 (312) 607-0217</a>
+      <a class="btn-outline-dark open-contact-modal" href="#contactModal" role="button">Email us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/golo-logo-full.png" alt="Golo Construction LLC — Built right. Done right." style="width:220px; height:auto; display:block;">
+        <p>Remodeling, carpentry, and painting delivered by a dedicated, owner-led team. Licensed and insured, serving the greater Chicago area.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Kitchen &amp; bath</a></li>
+          <li><a href="#services">Additions &amp; framing</a></li>
+          <li><a href="#services">Painting</a></li>
+          <li><a href="#services">Custom carpentry</a></li>
+          <li><a href="portfolio.html">Full portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+13126070217">+1 (312) 607-0217</a></li>
+          <li><a href="mailto:mqutub15@gmail.com">mqutub15@gmail.com</a></li>
+          <li>Chicago, IL</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Golo Construction LLC. All rights reserved.</span>
+      <span>Licensed &amp; insured</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="contactModal" class="contact-modal" aria-labelledby="contactModalTitle">
+  <div class="modal-header">
+    <div>
+      <h3 id="contactModalTitle">Request More Information</h3>
+      <p>Send a message to Golo Construction for project estimates or inquiries.</p>
+    </div>
+    <button type="button" class="modal-close-btn close-contact-modal" aria-label="Close dialog">&times;</button>
+  </div>
+  <div class="modal-body">
+    <form id="contactForm" action="https://formsubmit.co/mqutub15@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Customer Information Request - Golo Construction">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="form-group">
+        <label for="custName">Your Name <span class="req">*</span></label>
+        <input type="text" id="custName" name="name" class="form-control" placeholder="John Doe" required autocomplete="name">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="custEmail">Email Address <span class="req">*</span></label>
+          <input type="email" id="custEmail" name="email" class="form-control" placeholder="john@example.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="custPhone">Phone Number</label>
+          <input type="tel" id="custPhone" name="phone" class="form-control" placeholder="(312) 000-0000" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="custProject">Project Type / Service</label>
+        <select id="custProject" name="project" class="form-control">
+          <option value="General Information / Other">General Information / Other</option>
+          <option value="Kitchen & Bath Remodel">Kitchen &amp; Bath Remodel</option>
+          <option value="Custom Carpentry & Built-ins">Custom Carpentry &amp; Built-ins</option>
+          <option value="Painting & Staining">Painting &amp; Staining</option>
+          <option value="Additions & Framing">Additions &amp; Framing</option>
+          <option value="Deck & Exterior">Deck &amp; Exterior</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="custMessage">How can we help? <span class="req">*</span></label>
+        <textarea id="custMessage" name="message" class="form-control" rows="4" placeholder="Tell us about the project, questions, or timeline you have in mind..." required></textarea>
+      </div>
+
+      <button type="submit" class="form-submit-btn">Send Message</button>
+
+      <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+      <p class="modal-direct-note">
+        Or email directly: <a href="mailto:mqutub15@gmail.com">mqutub15@gmail.com</a>
+      </p>
+    </form>
+  </div>
+</dialog>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobilePanel = document.getElementById('mobilePanel');
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('open');
+    mobilePanel.classList.toggle('open');
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menuBtn.classList.remove('open');
+      mobilePanel.classList.remove('open');
+    });
+  });
+
+  // Testimonials Carousel Controls
+  const testiTrack = document.getElementById('testiTrack');
+  const testiPrev = document.getElementById('testiPrev');
+  const testiNext = document.getElementById('testiNext');
+  const testiDotsContainer = document.getElementById('testiDots');
+
+  if (testiTrack && testiPrev && testiNext) {
+    const testiCards = testiTrack.querySelectorAll('.testi');
+    
+    // Create pagination dots
+    testiCards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to review ${i + 1}`);
+      dot.addEventListener('click', () => {
+        testiCards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      });
+      if (testiDotsContainer) testiDotsContainer.appendChild(dot);
+    });
+
+    const getScrollStep = () => {
+      const firstCard = testiTrack.querySelector('.testi');
+      if (!firstCard) return 360;
+      return firstCard.offsetWidth + 24;
+    };
+
+    testiNext.addEventListener('click', () => {
+      const maxScroll = testiTrack.scrollWidth - testiTrack.clientWidth - 10;
+      if (testiTrack.scrollLeft >= maxScroll) {
+        testiTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        testiTrack.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+      }
+    });
+
+    testiPrev.addEventListener('click', () => {
+      if (testiTrack.scrollLeft <= 10) {
+        testiTrack.scrollTo({ left: testiTrack.scrollWidth, behavior: 'smooth' });
+      } else {
+        testiTrack.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+      }
+    });
+
+    const updateDots = () => {
+      if (!testiDotsContainer) return;
+      const dots = testiDotsContainer.querySelectorAll('.testi-dot');
+      let activeIndex = 0;
+      let minDiff = Infinity;
+      testiCards.forEach((card, i) => {
+        const diff = Math.abs(card.offsetLeft - testiTrack.offsetLeft - testiTrack.scrollLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          activeIndex = i;
+        }
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIndex);
+      });
+    };
+
+    testiTrack.addEventListener('scroll', updateDots, { passive: true });
+  }
+
+  // Contact Modal & Form Handling
+  const contactModal = document.getElementById('contactModal');
+  const openModalBtns = document.querySelectorAll('.open-contact-modal');
+  const closeModalBtns = document.querySelectorAll('.close-contact-modal');
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  if (contactModal) {
+    openModalBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.showModal();
+      });
+    });
+
+    closeModalBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        contactModal.close();
+      });
+    });
+
+    contactModal.addEventListener('click', (e) => {
+      const rect = contactModal.getBoundingClientRect();
+      const isInDialog = (
+        rect.top <= e.clientY &&
+        e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.left + rect.width
+      );
+      if (!isInDialog) {
+        contactModal.close();
+      }
+    });
+  }
+
+  // Phone number formatter on click out (blur)
+  function formatPhoneNumber(val) {
+    if (!val) return '';
+    const trimmed = val.trim();
+    if (!trimmed) return '';
+
+    let mainPart = trimmed;
+    let extPart = '';
+    const extMatch = trimmed.match(/^(.*?)(?:\s*(?:ext\.?|x|extension)\s*(\d+))$/i);
+    if (extMatch) {
+      mainPart = extMatch[1];
+      extPart = ` ext. ${extMatch[2]}`;
+    }
+
+    const hasPlus = mainPart.startsWith('+');
+    const digits = mainPart.replace(/\D/g, '');
+
+    if (digits.length === 10) {
+      const formatted = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+      return (hasPlus ? `+1 ${formatted}` : formatted) + extPart;
+    } else if (digits.length === 11 && digits.startsWith('1')) {
+      const formatted = `+1 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7)}`;
+      return formatted + extPart;
+    } else if (digits.length === 7) {
+      return `${digits.slice(0, 3)}-${digits.slice(3)}${extPart}`;
+    }
+
+    return trimmed;
+  }
+
+  const phoneInput = document.getElementById('custPhone');
+  if (phoneInput) {
+    phoneInput.addEventListener('blur', () => {
+      phoneInput.value = formatPhoneNumber(phoneInput.value);
+    });
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (phoneInput) {
+        phoneInput.value = formatPhoneNumber(phoneInput.value);
+      }
+      const submitBtn = contactForm.querySelector('.form-submit-btn');
+      const originalBtnText = submitBtn.innerHTML;
+
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+
+      // Check if browsing directly as a local file (file:///)
+      if (window.location.protocol === 'file:') {
+        formStatus.className = 'form-status error';
+        const subject = encodeURIComponent(`Information Request - ${data.name || 'Customer'}`);
+        const body = encodeURIComponent(
+          `Hello Golo Construction,\n\nI would like to request more information.\n\nName: ${data.name || ''}\nEmail: ${data.email || ''}\nPhone: ${data.phone || ''}\nProject Type: ${data.project || ''}\n\nDetails:\n${data.message || ''}`
+        );
+        const mailtoUrl = `mailto:mqutub15@gmail.com?subject=${subject}&body=${body}`;
+        formStatus.innerHTML = `<strong>Local file preview mode:</strong> Browsing directly as an HTML file (<code>file://</code>) blocks web form APIs.<br><br><a href="${mailtoUrl}" class="btn-primary" style="display:inline-block; padding:8px 16px; font-size:13px; text-decoration:none;">Send via Email App</a><br><br><small style="color:var(--ink-soft);">To test online sending, view the page through a local server (e.g., <code>http://localhost:8000</code>).</small>`;
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formStatus.className = 'form-status info';
+      formStatus.textContent = 'Sending your request...';
+      formStatus.style.display = 'block';
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/mqutub15@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (response.ok && (result.success === 'true' || result.success === true)) {
+          formStatus.className = 'form-status success';
+          formStatus.innerHTML = '<strong>Thank you!</strong> Your message has been sent to Golo Construction. We will get back to you shortly.';
+          contactForm.reset();
+          submitBtn.textContent = 'Sent!';
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }, 4000);
+        } else {
+          const errorMsg = result.message || 'The form submission could not be processed.';
+          throw new Error(errorMsg);
+        }
+      } catch (err) {
+        console.error('Form submit error:', err);
+        const subject = encodeURIComponent(`Information Request - ${data.name || 'Customer'}`);
+        const body = encodeURIComponent(
+          `Hello Golo Construction,\n\nI would like to request more information.\n\nName: ${data.name || ''}\nEmail: ${data.email || ''}\nPhone: ${data.phone || ''}\nProject Type: ${data.project || ''}\n\nDetails:\n${data.message || ''}`
+        );
+        const mailtoUrl = `mailto:mqutub15@gmail.com?subject=${subject}&body=${body}`;
+
+        formStatus.className = 'form-status error';
+        formStatus.innerHTML = `<strong>${err.message}</strong><br><br><a href="${mailtoUrl}" style="text-decoration:underline; font-weight:600; color:var(--rust);">Click here to send via your email client</a> or call <a href="tel:+13126070217" style="text-decoration:underline; font-weight:600;">+1 (312) 607-0217</a>.`;
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    });
+  }
+</script>
+</body>
+</html>
