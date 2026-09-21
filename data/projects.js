@@ -166,3 +166,4 @@ window.GOLO_PROJECTS = [
     ]
   }
 ];
+
