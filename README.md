@@ -2,7 +2,7 @@
 
 Official website for **Golo Construction LLC**, a premier residential and commercial remodeling contractor based in Chicago, IL.
 
-- **Live URL**: [https://muntaserq.github.io/golo-construction-website/](https://muntaserq.github.io/golo-construction-website/)
+- **Live URL**: [https://goloconstruction.com/](https://goloconstruction.com/)
 - **Founder & Owner**: Voglim Demiri
 - **Service Area**: Chicago, IL & the Greater Chicago Area
 - **Phone**: +1 (312) 607-0217
