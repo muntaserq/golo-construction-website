@@ -15,7 +15,7 @@ Official website for **Golo Construction LLC**, a premier residential and commer
 1. [Project Overview](#project-overview)
 2. [Folder Structure](#folder-structure)
 3. [How to Manage Portfolio Projects & Images](#how-to-manage-portfolio-projects--images)
-   - [Step 1: Add photos to `portfolio_images/`](#step-1-add-photos-to-portfolio_images)
+   - [Step 1: Add photos to the appropriate category subfolder](#step-1-add-photos-to-the-appropriate-category-subfolder)
    - [Step 2: Add project to `data/projects.json`](#step-2-add-project-to-dataprojectsjson)
    - [How to Showcase as "Recent" on the Landing Page](#how-to-showcase-as-recent-on-the-landing-page)
    - [Project Schema Reference](#project-schema-reference)
@@ -48,6 +48,10 @@ golo-construction-website/
 │   ├── projects.json        # Central catalog of all portfolio projects
 │   └── projects.js          # Offline/fallback mirror for file protocol preview
 ├── portfolio_images/        # High-resolution project photography
+│   ├── kitchen/             # Kitchen remodels & built-ins
+│   ├── bath/                # Bathroom remodels & tile work
+│   ├── carpentry/           # Fireplace surrounds, doors, trim & closets
+│   └── painting/            # Deck staining, exterior & interior painting
 └── images/                  # Branding assets, logos, and web icons
     ├── golo-logo-full.png   # Full brand logo (used for social media previews)
     ├── golo-mark.png        # Header logo mark
@@ -60,11 +64,11 @@ golo-construction-website/
 
 The website utilizes a **data-driven portfolio system**. You do **not** need to edit complex HTML to add, edit, or remove projects. Everything is managed through `portfolio_images/` and `data/projects.json`.
 
-### Step 1: Add photos to `portfolio_images/`
+### Step 1: Add photos to the appropriate category subfolder
 
-1. Save your project photos into the `portfolio_images/` directory.
+1. Save your project photos into the corresponding `portfolio_images/` category subfolder (`kitchen/`, `bath/`, `carpentry/`, or `painting/`).
 2. Use clean, descriptive filenames with underscores or hyphens:
-   - Example: `portfolio_images/new_kitchen_1.jpg`, `portfolio_images/new_kitchen_2.jpg`
+   - Example: `portfolio_images/kitchen/new_kitchen_1.jpg`, `portfolio_images/kitchen/new_kitchen_2.jpg`
 3. JPG, PNG, and WebP image formats are supported.
 
 ### Step 2: Add project to `data/projects.json`
@@ -80,8 +84,8 @@ Open `data/projects.json` and add an entry to the array:
   "featured": true,
   "description": "Full kitchen transformation with custom quartz counters, two-tone shaker cabinetry, and designer lighting.",
   "images": [
-    "portfolio_images/new_kitchen_1.jpg",
-    "portfolio_images/new_kitchen_2.jpg"
+    "portfolio_images/kitchen/new_kitchen_1.jpg",
+    "portfolio_images/kitchen/new_kitchen_2.jpg"
   ]
 }
 ```
@@ -106,7 +110,7 @@ The landing page (`index.html`) automatically populates the **"Recent work"** se
   "featured": true,
   "description": "Floor-to-ceiling custom oak shelving unit with hidden wiring.",
   "images": [
-    "portfolio_images/shelving_1.jpg"
+    "portfolio_images/carpentry/shelving_1.jpg"
   ]
 }
 ```
@@ -123,14 +127,14 @@ The landing page (`index.html`) automatically populates the **"Recent work"** se
 | `categoryLabel` | string | User-facing category tag (e.g., `"Kitchens & built-ins"`). |
 | `featured` | boolean | `true` to showcase in "Recent work" on `index.html`; `false` for portfolio only. |
 | `description` | string | Brief description of the work performed. |
-| `images` | array | List of image paths (e.g., `["portfolio_images/img1.jpg", "portfolio_images/img2.jpg"]`). |
+| `images` | array | List of image paths (e.g., `["portfolio_images/kitchen/img1.jpg", "portfolio_images/kitchen/img2.jpg"]`). |
 
 You can also provide custom alternative text per image:
 
 ```json
 "images": [
-  { "src": "portfolio_images/img1.jpg", "alt": "Angle view of custom cabinets" },
-  { "src": "portfolio_images/img2.jpg", "alt": "Detail view of island countertop" }
+  { "src": "portfolio_images/kitchen/img1.jpg", "alt": "Angle view of custom cabinets" },
+  { "src": "portfolio_images/kitchen/img2.jpg", "alt": "Detail view of island countertop" }
 ]
 ```
 

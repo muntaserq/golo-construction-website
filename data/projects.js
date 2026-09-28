@@ -10,15 +10,15 @@ window.GOLO_PROJECTS = [
     "description": "Custom arched alcove build-out featuring quartz countertop, mosaic tile backsplash, floating white oak shelves, cabinetry, and wine cooler.",
     "images": [
       {
-        "src": "portfolio_images/kitchen_2.jpg",
+        "src": "portfolio_images/kitchen/kitchen_2.jpg",
         "alt": "Custom dining alcove built-in (Finished view)"
       },
       {
-        "src": "portfolio_images/kitchen_1.jpg",
+        "src": "portfolio_images/kitchen/kitchen_1.jpg",
         "alt": "Backsplash tile, floating oak shelves & cabinetry detail"
       },
       {
-        "src": "portfolio_images/kitchen_3.jpg",
+        "src": "portfolio_images/kitchen/kitchen_3.jpg",
         "alt": "Dining room alcove before remodel"
       }
     ]
@@ -32,15 +32,15 @@ window.GOLO_PROJECTS = [
     "description": "Glass shower enclosure, tile and vanity — start to finish.",
     "images": [
       {
-        "src": "portfolio_images/bathroom_remodel_finished.jpg",
+        "src": "portfolio_images/bath/bathroom_remodel_finished.jpg",
         "alt": "Finished bathroom"
       },
       {
-        "src": "portfolio_images/bathroom_shower_in_progress_remodel_copy.jpg",
+        "src": "portfolio_images/bath/bathroom_shower_in_progress_remodel_copy.jpg",
         "alt": "Shower tile in progress"
       },
       {
-        "src": "portfolio_images/bathroom_shower_in_progress_remodel.jpg",
+        "src": "portfolio_images/bath/bathroom_shower_in_progress_remodel.jpg",
         "alt": "Shower cement board stage"
       }
     ]
@@ -54,15 +54,15 @@ window.GOLO_PROJECTS = [
     "description": "Two-story back porch stripped, repaired and restained top to bottom.",
     "images": [
       {
-        "src": "portfolio_images/outside_deck_5.jpg",
+        "src": "portfolio_images/painting/outside_deck_5.jpg",
         "alt": "Full house view"
       },
       {
-        "src": "portfolio_images/outside_deck_2.jpg",
+        "src": "portfolio_images/painting/outside_deck_2.jpg",
         "alt": "Staircase, refinished"
       },
       {
-        "src": "portfolio_images/outside_deck_4.jpg",
+        "src": "portfolio_images/painting/outside_deck_4.jpg",
         "alt": "Upper deck"
       }
     ]
@@ -76,11 +76,11 @@ window.GOLO_PROJECTS = [
     "description": "Built and installed on site to fit the room exactly.",
     "images": [
       {
-        "src": "portfolio_images/fireplace_1.jpg?v=2",
+        "src": "portfolio_images/carpentry/fireplace_1.jpg?v=2",
         "alt": "Fireplace straight-on view"
       },
       {
-        "src": "portfolio_images/fireplace_2.jpg?v=2",
+        "src": "portfolio_images/carpentry/fireplace_2.jpg?v=2",
         "alt": "Fireplace angle view"
       }
     ]
@@ -94,15 +94,15 @@ window.GOLO_PROJECTS = [
     "description": "From an arched steel entry door to interior door casing and hardware.",
     "images": [
       {
-        "src": "portfolio_images/door_frame_and_door_handle.jpg",
+        "src": "portfolio_images/carpentry/door_frame_and_door_handle.jpg",
         "alt": "Door and casing"
       },
       {
-        "src": "portfolio_images/front_door.jpg",
+        "src": "portfolio_images/carpentry/front_door.jpg",
         "alt": "Arched steel entry door"
       },
       {
-        "src": "portfolio_images/door_handle.jpg",
+        "src": "portfolio_images/carpentry/door_handle.jpg",
         "alt": "Door hardware detail"
       }
     ]
@@ -116,15 +116,15 @@ window.GOLO_PROJECTS = [
     "description": "Board-and-batten wall paneling, baseboard and casing, built and painted.",
     "images": [
       {
-        "src": "portfolio_images/wayne_coating_room.jpg",
+        "src": "portfolio_images/carpentry/wayne_coating_room.jpg",
         "alt": "Wainscoting, room view"
       },
       {
-        "src": "portfolio_images/wayne_coating_room_2.jpg",
+        "src": "portfolio_images/carpentry/wayne_coating_room_2.jpg",
         "alt": "Wainscoting, close view"
       },
       {
-        "src": "portfolio_images/carpentry_baseboard.jpg",
+        "src": "portfolio_images/carpentry/carpentry_baseboard.jpg",
         "alt": "Baseboard detail"
       }
     ]
@@ -138,15 +138,15 @@ window.GOLO_PROJECTS = [
     "description": "Wall-to-wall wire shelving and hanging rod system.",
     "images": [
       {
-        "src": "portfolio_images/bedroom_closet_1.jpg",
+        "src": "portfolio_images/carpentry/bedroom_closet_1.jpg",
         "alt": "Closet shelving, angle 1"
       },
       {
-        "src": "portfolio_images/bedroom_closet_2.jpg",
+        "src": "portfolio_images/carpentry/bedroom_closet_2.jpg",
         "alt": "Closet shelving, angle 2"
       },
       {
-        "src": "portfolio_images/bedroom_closet_3.jpg",
+        "src": "portfolio_images/carpentry/bedroom_closet_3.jpg",
         "alt": "Closet shelving, full view"
       }
     ]
@@ -160,7 +160,7 @@ window.GOLO_PROJECTS = [
     "description": "Deck with a built-in perimeter bench, finished in a warm cedar tone.",
     "images": [
       {
-        "src": "portfolio_images/outside_deck_6.jpg",
+        "src": "portfolio_images/painting/outside_deck_6.jpg",
         "alt": "Backyard deck with built-in bench, cedar stain"
       }
     ]
